@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Šiauliai data</TITLE>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+</HEAD>
+<BODY>
+<div class="container-fluid">
+    <div id="app">
+        <!--
+        <div class="row">
+            <div class="col-sm-12">
+                <button @click="addItem" class="btn btn-primary"><i class="glyphicon glyphicon-plus-sign"></i> Add an
+                    item
+                </button>
+                <button @click="toggleFilter" class="btn btn-outline-primary">Toggle Filter</button>
+                <button @click="togglePicker" class="btn btn-outline-primary">Toggle Column Picker</button>
+                <button @click="toggleSelect" class="btn btn-outline-primary">Toggle Select column</button>
+                <button @click="togglePagination" class="btn btn-outline-primary">Toggle Pagination</button>
+            </div>
+            <br/><br/>
+        </div>
+        -->
+        <div class="row">
+            <div class="col-12">
+                <vue-bootstrap-table :columns="columns" :values="values" :show-filter="showFilter"
+                                     :show-column-picker="showPicker" :selectable="showSelect" :paginated="paginated"
+                                     :multi-column-sortable="multiColumnSortable"
+                                     :row-click-handler=handleRowFunction
+                                     :default-order-column="columnToSortBy"
+                                     :default-order-direction=false
+                                     :ajax="ajax">
+                </vue-bootstrap-table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/vue.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/vue2-bootstrap-table2.umd.min.js"></script>
+<script src="js/app.js"></script>
+</BODY>
+</HTML>
