@@ -70,7 +70,7 @@ const vueFramework = new Vue({
             let item = {
                 "date": date,
                 "name": name,
-                "fileName": fileName
+                "fileName": 'Pages/' + fileName
             };
             this.values.push(item);
         },
