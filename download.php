@@ -8,19 +8,18 @@ $html = str_replace('href="/', 'href="https://www.siauliai.lt/', $html);
 $html = str_replace('content="/', 'content="https://www.siauliai.lt/', $html);
 $date = date_format(new DateTime(), 'Y-m-d');
 $fileName = "$date.html";
+$dataIndex = [];
 
 file_put_contents("Pages/$fileName", $html);
 
-$dataIndex = [];
 $files = scandir('./Pages/', SCANDIR_SORT_ASCENDING);
 foreach ($files as $file) {
   if (!is_dir($file)) {
-    //echo $file . PHP_EOL;
-    $dataIndex[] = $file
+    $dataIndex[] = $file;
   }
 }
 
-print_r( $dataIndex);
-//file_put_contents("data_index.json", json_encode($dataIndexContentArray));
+//print_r($dataIndex);
+file_put_contents("data_index.json", json_encode($dataIndex));
 
 echo "Done" . PHP_EOL;
