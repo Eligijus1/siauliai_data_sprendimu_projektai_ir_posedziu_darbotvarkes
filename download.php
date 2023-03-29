@@ -17,7 +17,7 @@ file_put_contents("Pages/$fileName", $html);
 
 $files = scandir('./Pages/', SCANDIR_SORT_ASCENDING);
 foreach ($files as $file) {
-  if (!is_dir($file)) {
+  if (!is_dir($file) && $file !== 'resources') {
     $dataIndex[] = $file;
   }
 }
