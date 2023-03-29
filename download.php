@@ -5,9 +5,9 @@
 
 $html = file_get_contents('https://www.siauliai.lt/lt/list/view/posedziu-klausimai2');
 
-$html = str_replace('href="/', 'href="/Pages/resources/', $html);
-$html = str_replace('content="/', 'content="/Pages/resources/', $html);
-$html = str_replace('src="/', 'src="/Pages/resources/', $html);
+$html = str_replace('href="/', 'href="/siauliai_data_sprendimu_projektai_ir_posedziu_darbotvarkes/Pages/resources/', $html);
+$html = str_replace('content="/', 'content="/siauliai_data_sprendimu_projektai_ir_posedziu_darbotvarkes/Pages/resources/', $html);
+$html = str_replace('src="/', 'src="/siauliai_data_sprendimu_projektai_ir_posedziu_darbotvarkes/Pages/resources/', $html);
 
 $date = date_format(new DateTime(), 'Y-m-d');
 $fileName = "$date.html";
